@@ -108,9 +108,9 @@ $(document).ready(function () {
                 var lightCount
                 var lprice = kinds == '돌출' ? 10000 : 7000;
                 var lightP
-                var lightWidthCount = Math.round((getwidth - 200) / 180 + 1);
+                var lightWidthCount = Math.ceil((getwidth - 200) / 180 + 1);
                 var lightHeightCount = Math.round(getlength / 1150 + 0.25);
-                // 폭 상하 100 띄우고(-200) 길이쪽은 1200 등 겹침 고려해서 1150, 반올림하면 작은폭에 들어가는 600 보정
+                // 폭 상하 100 띄우고(-200)간격이 180을 넘지않게 올림(ceil) 길이쪽은 1200 등 겹침 고려해서 1150, 반올림하면 작은폭에 들어가는 600 보정
                 var lightCountCalu = lightWidthCount * lightHeightCount;
 
                 if ($(this).hasClass('form-control')) {
